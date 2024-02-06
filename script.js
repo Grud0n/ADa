@@ -66,4 +66,13 @@ function addCraftsmanBox(companyName, location, category, shortDescription) {
 
   // Box zum Container hinzufügen
   craftsmanBoxContainer.appendChild(newCraftsmanBox);
+
+  // Überprüfen, ob eine neue Zeile für die Kategorie benötigt wird
+  var boxesWithSameCategory = document.querySelectorAll('.craftsman-box[data-category="' + category + '"]');
+  if (boxesWithSameCategory.length > 1) {
+    craftsmanBoxContainer.appendChild(document.createElement('br')); // Fügt eine neue Zeile hinzu
+  }
+
+  // Füge der neuen Box die Kategorie als Datenattribut hinzu
+  newCraftsmanBox.dataset.category = category;
 }
