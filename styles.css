@@ -85,12 +85,12 @@ nav {
 
 main.craftsman-boxes {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   padding: 20px;
 }
 
-.craftsman-boxs {
+.craftsman-boxes {
   display: inline-block;
 }
 
@@ -100,9 +100,8 @@ main.craftsman-boxes {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin: 10px 0;
+  margin: 10px;
   text-align: center;
-  overflow: hidden;
 }
 
 .craftsman-box img {
