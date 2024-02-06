@@ -85,8 +85,9 @@ nav {
 
 main.craftsman-boxes {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto; /* Horizontales Scrollen*/
+  flex-wrap: wrap; /* Erlaubt, dass die Boxen bei Bedarf umbrechen */
+  justify-content: flex-start; /* Startet die Boxen am linken Rand */
+  align-items: flex-start; /* Ausrichtung der Boxen am oberen Rand */
   padding: 20px;
 }
 
@@ -96,8 +97,8 @@ main.craftsman-boxes {
 }
 
 .craftsman-box {
-  width: 48%;
-  min-width: 300px; /* Mindestbreite festlegen*/
+  width: calc(50% - 20px); /* 50% der Breite minus Margin */
+  min-width: 300px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
