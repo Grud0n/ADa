@@ -97,7 +97,7 @@ main.craftsman-boxes {
 
 .craftsman-box {
   width: 48%;
-  min-width: 200px; /* Mindestbreite festlegen, um zu verhindern, dass die Boxen zu schmal werden */
+  min-width: 300px; /* Mindestbreite festlegen*/
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
