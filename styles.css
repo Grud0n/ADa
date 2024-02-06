@@ -86,9 +86,10 @@ nav {
 main.craftsman-boxes {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  overflow-x: auto; /* Horizontales Scrollen*/
   padding: 20px;
 }
+
 
 .craftsman-boxes {
   display: inline-block;
@@ -96,6 +97,7 @@ main.craftsman-boxes {
 
 .craftsman-box {
   width: 48%;
+  min-width: 200px; /* Mindestbreite festlegen, um zu verhindern, dass die Boxen zu schmal werden */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
