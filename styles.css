@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-decoration: none;
 }
 
 header {
@@ -25,6 +26,7 @@ nav {
   width: 50px;
   height: auto;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .logo h1 {
@@ -85,9 +87,9 @@ nav {
 
 main.craftsman-boxes {
   display: flex;
-  flex-wrap: wrap; /* Erlaubt, dass die Boxen bei Bedarf umbrechen */
-  justify-content: flex-start; /* Startet die Boxen am linken Rand */
-  align-items: flex-start; /* Ausrichtung der Boxen am oberen Rand */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 20px;
 }
 
