@@ -106,8 +106,16 @@ function submitData() {
 
 // Funktion zum Hinzufügen einer Handwerkerbox
 function addCraftsmanBox(companyName, location, category, shortDescription) {
-  // Container für die Boxen
-  var craftsmanBoxContainer = document.getElementById('craftsman-box-container');
+  // Überprüfe, ob ein Container für die Kategorie bereits existiert
+  let categoryContainer = document.querySelector(`.craftsman-category[data-category="${category}"]`);
+  
+  // Wenn kein Container existiert, erstelle einen neuen
+  if (!categoryContainer) {
+    categoryContainer = document.createElement('div');
+    categoryContainer.className = 'craftsman-category';
+    categoryContainer.dataset.category = category;
+    document.getElementById('craftsman-box-container').appendChild(categoryContainer);
+  }
 
   // Neue Box erstellen
   var newCraftsmanBox = document.createElement('div');
@@ -121,15 +129,6 @@ function addCraftsmanBox(companyName, location, category, shortDescription) {
     <p>Kurzbeschreibung: ${shortDescription}</p>
   `;
 
-  // Box zum Container hinzufügen
-  craftsmanBoxContainer.appendChild(newCraftsmanBox);
-
-  // Überprüfen, ob eine neue Zeile für die Kategorie benötigt wird
-  var boxesWithSameCategory = document.querySelectorAll('.craftsman-box[data-category="' + category + '"]');
-  if (boxesWithSameCategory.length > 1) {
-    newCraftsmanBox.style.marginTop = '20px'; // Fügt einen Abstand zur vorherigen Box hinzu
-  }
-
-  // Füge der neuen Box die Kategorie als Datenattribut hinzu
-  newCraftsmanBox.dataset.category = category;
+  // Box zum Kategorien-Container hinzufügen
+  categoryContainer.appendChild(newCraftsmanBox);
 }
