@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  text-decoration: none;
 }
 
 header {
@@ -20,6 +19,10 @@ nav {
 .logo {
   display: flex;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 .logo img {
