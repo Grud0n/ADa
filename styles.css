@@ -90,12 +90,13 @@ a {
   display: block;
 }
 
-main.craftsman-boxes {
+main.craftsman-boxes :hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
+  
 }
 
 .craftsman-boxes {
