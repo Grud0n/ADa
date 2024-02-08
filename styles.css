@@ -128,7 +128,7 @@ main.craftsman-boxes {
 }
 
 .craftsman-box a:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .craftsman-box img {
