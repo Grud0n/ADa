@@ -90,7 +90,7 @@ a {
   display: block;
 }
 
-main.craftsman-boxes :hover{
+main.craftsman-boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -125,6 +125,10 @@ main.craftsman-boxes :hover{
   margin: 10px;
   text-align: center;
   flex-grow: 1;
+}
+
+.craftsman-box a:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0.5);
 }
 
 .craftsman-box img {
