@@ -3,6 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('add-box-button').addEventListener('click', openPopup);
   document.getElementById('closePopup').addEventListener('click', closePopup);
   document.getElementById('submitData').addEventListener('click', submitData);
+  // Event-Listener für den Zurück-Button hinzufügen
+  document.getElementById('back-button').addEventListener('click', function () {
+    window.history.back(); // Zurück zur vorherigen Seite
+  });
+  // Event-Listener für Klicks auf die Boxen hinzufügen
+  var boxes = document.querySelectorAll('.craftsman-box');
+  boxes.forEach(function (box) {
+    box.addEventListener('click', function () {
+      var companyId = box.dataset.companyId; // ID der Firma aus dem Datenattribut erhalten
+      // Hier kannst du die Firma laden und die entsprechenden Informationen anzeigen
+      loadCompanyDetails(companyId);
+    });
+  });
   // Event-Listener für Kategorien im Dropdown hinzufügen
   var categoryLinks = document.querySelectorAll('.dropdown-content a');
   categoryLinks.forEach(function(link) {
@@ -37,6 +50,18 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Bewertungstext:', reviewText);
   });
 });
+
+// Funktion zum Laden der Firmendetails
+function loadCompanyDetails(companyId) {
+  // Beispiel:
+  // var company = loadCompanyFromServer(companyId);
+  // displayCompanyDetails(company);
+}
+
+// Funktion zum Anzeigen der Firmendetails
+function displayCompanyDetails(company) {
+  // Hier könntest du den HTML-Code für die Anzeige der Firmendetails generieren und in das DOM einfügen
+}
 
 // Funktion zum Laden der Firmendetails
 function loadCompanyDetails() {
