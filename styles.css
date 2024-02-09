@@ -3,12 +3,17 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Überarbeitetes Design für den Header */
-
 header {
-  background-color: #007BFF; /* Hintergrundfarbe anpassen */
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
   padding: 15px 0;
   text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -16,56 +21,58 @@ header {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .logo img {
   width: 50px;
   height: auto;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .logo h1 {
   margin: 0;
-  color: #fff; /* Textfarbe anpassen */
+  color: #333;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #fff; /* Textfarbe anpassen */
+  color: #333;
   margin: 0 15px;
-  transition: color 0.3s ease; /* Hinzufügen einer sanften Farbübergangsanimation */
-}
-
-.nav-links a:hover {
-  color: #f0f0f0; /* Farbe bei Hover-Effekt anpassen */
 }
 
 #add-box-button {
-  background-color: #fff; /* Hintergrundfarbe anpassen */
-  color: #007BFF; /* Textfarbe anpassen */
+  background-color: #000;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
-  transition: background-color 0.3s, color 0.3s; /* Hinzufügen einer sanften Farbübergangsanimation */
 }
 
-#add-box-button:hover {
-  background-color: #f0f0f0; /* Hintergrundfarbe bei Hover-Effekt anpassen */
-  color: #007BFF; /* Textfarbe bei Hover-Effekt anpassen */
+.dropdown {
+  display: inline-block;
 }
 
 .dropbtn {
-  background-color: #007BFF; /* Hintergrundfarbe anpassen */
-  color: #fff; /* Textfarbe anpassen */
+  background-color: #333;
+  color: #fff;
   padding: 10px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Hinzufügen einer sanften Farbübergangsanimation */
 }
 
-.dropbtn:hover {
-  background-color: #0056b3; /* Hintergrundfarbe bei Hover-Effekt anpassen */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -73,13 +80,93 @@ header {
   padding: 12px 16px;
   display: block;
   text-decoration: none;
-  transition: background-color 0.3s; /* Hinzufügen einer sanften Farbübergangsanimation */
 }
 
 .dropdown-content a:hover {
-  background-color: #f0f0f0; /* Hintergrundfarbe bei Hover-Effekt anpassen */
+  background-color: #ddd;
 }
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.portal-switch {
+  margin-right: 20px;
+}
+
+.portal-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.portal-button.active {
+  color: #007BFF; 
+}
+
+.portal-button:hover {
+  color: #555;
+}
+
+
+/* Stil für den Toggle-Schalter */
+.toggle-switch {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+}
+
+.toggle-switch-label:before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  top: 4px;
+  left: 4px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + .toggle-switch-label {
+  background-color: #2196F3; /* Blaue Farbe für Geschäftskunden */
+}
+
+.toggle-switch input:checked + .toggle-switch-label:before {
+  transform: translateX(26px);
+}
+
+.toggle-switch-label:after {
+  content: 'Privat'; /* Standardwert */
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-switch input:checked + .toggle-switch-label:after {
+  content: 'Geschäft'; /* Angezeigt, wenn auf Geschäftskunden umgeschaltet wird */
+}
 
 
 main.craftsman-boxes {
