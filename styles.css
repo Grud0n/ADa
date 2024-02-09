@@ -89,7 +89,7 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+/*
 .portal-switch {
   margin-right: 20px;
 }
@@ -111,7 +111,7 @@ a {
 .portal-button:hover {
   color: #555;
 }
-
+*/
 
 /* Stil für den Toggle-Schalter */
 .toggle-switch {
