@@ -89,7 +89,7 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+/*
 .portal-switch {
   margin-right: 20px;
 }
@@ -110,6 +110,62 @@ a {
 
 .portal-button:hover {
   color: #555;
+}
+*/
+
+/* Stil für den Toggle-Schalter */
+.toggle-switch {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+}
+
+.toggle-switch-label:before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  top: 4px;
+  left: 4px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + .toggle-switch-label {
+  background-color: #2196F3; /* Blaue Farbe für Geschäftskunden */
+}
+
+.toggle-switch input:checked + .toggle-switch-label:before {
+  transform: translateX(26px);
+}
+
+.toggle-switch-label:after {
+  content: 'Privat'; /* Standardwert */
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-switch input:checked + .toggle-switch-label:after {
+  content: 'Geschäft'; /* Angezeigt, wenn auf Geschäftskunden umgeschaltet wird */
 }
 
 
