@@ -179,3 +179,14 @@ function togglePortal(portal) {
     // Hier den Code einfügen, um zum Privatkundenportal zu wechseln
   }
 }
+// JavaScript zum Umschalten zwischen Geschäfts- und Privatkunden
+document.getElementById('customer-toggle').addEventListener('change', function() {
+  // Hier kannst du die Logik für den Wechsel zwischen Geschäftskunden und Privatkunden implementieren
+  if (this.checked) {
+    // Geschäftskunden ausgewählt
+    console.log('Geschäftskunden ausgewählt');
+  } else {
+    // Privatkunden ausgewählt
+    console.log('Privatkunden ausgewählt');
+  }
+});
