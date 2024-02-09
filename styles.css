@@ -89,7 +89,31 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/*
+.portal-switch {
+  margin-right: 20px;
+}
 
+.portal-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.portal-button.active {
+  color: #007BFF; 
+}
+
+.portal-button:hover {
+  color: #555;
+}
+*/
+
+/* Stil für den Toggle-Schalter */
 .toggle-switch {
   display: inline-block;
   cursor: pointer;
@@ -121,7 +145,7 @@ a {
 }
 
 .toggle-switch input:checked + .toggle-switch-label {
-  background-color: #2196F3;
+  background-color: #2196F3; /* Blaue Farbe für Geschäftskunden */
 }
 
 .toggle-switch input:checked + .toggle-switch-label:before {
@@ -129,7 +153,7 @@ a {
 }
 
 .toggle-switch-label:after {
-  content: 'Privat';
+  content: 'Privat'; /* Standardwert */
   color: white;
   display: block;
   position: absolute;
@@ -141,8 +165,9 @@ a {
 }
 
 .toggle-switch input:checked + .toggle-switch-label:after {
-  content: 'Geschäft';
+  content: 'Geschäft'; /* Angezeigt, wenn auf Geschäftskunden umgeschaltet wird */
 }
+
 
 main.craftsman-boxes {
   display: flex;
@@ -150,10 +175,27 @@ main.craftsman-boxes {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
+  
+}
+
+.craftsman-boxes {
+  display: inline-block;
+}
+
+#craftsman-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Abstand zwischen den Boxen */
+}
+
+.craftsman-category {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .craftsman-box {
-  width: calc(50% - 20px);
+  width: calc(50% - 20px); /* 50% der Breite minus Margin */
   transition: box-shadow .3s;
   min-width: 300px;
   border: 1px solid #ddd;
@@ -163,17 +205,22 @@ main.craftsman-boxes {
   margin: 10px;
   text-align: center;
   flex-grow: 1;
-  position: relative; /* Position für das Bild-Overlay */
+}
+
+.craftsman-box a:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .craftsman-box img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px; /* Runde Ecken für das Bild */
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
 }
 
-.craftsman-box:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+.craftsman-box h3, .craftsman-box p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .overlay {
@@ -231,4 +278,70 @@ main.craftsman-boxes {
 .popup button#closePopup {
   background: #ddd;
   color: #333;
+}
+
+.faq-section {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.faq-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-answer {
+  padding: 15px;
+  display: none;
+}
+
+.faq-question:focus {
+  outline: none;
+}
+
+.faq-question:hover {
+  background-color: #f5f5f5;
+}
+
+.faq-question.active {
+  background-color: #f5f5f5;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
