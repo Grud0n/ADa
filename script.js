@@ -157,3 +157,25 @@ function addCraftsmanBox(companyName, location, category, shortDescription) {
   // Box zum Kategorien-Container hinzufügen
   categoryContainer.appendChild(newCraftsmanBox);
 }
+document.addEventListener('DOMContentLoaded', function () {
+  // Event-Listener für den Button zum Wechseln zwischen den Portalen hinzufügen
+  document.getElementById('business-portal').addEventListener('click', function () {
+    togglePortal('business');
+  });
+  document.getElementById('consumer-portal').addEventListener('click', function () {
+    togglePortal('consumer');
+  });
+});
+
+// Funktion zum Wechseln zwischen den Portalen
+function togglePortal(portal) {
+  if (portal === 'business') {
+    document.getElementById('business-portal').classList.add('active');
+    document.getElementById('consumer-portal').classList.remove('active');
+    // Hier den Code einfügen, um zum Geschäftskundenportal zu wechseln
+  } else if (portal === 'consumer') {
+    document.getElementById('consumer-portal').classList.add('active');
+    document.getElementById('business-portal').classList.remove('active');
+    // Hier den Code einfügen, um zum Privatkundenportal zu wechseln
+  }
+}
