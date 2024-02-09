@@ -90,6 +90,29 @@ a {
   display: block;
 }
 
+.portal-switch {
+  margin-right: 20px;
+}
+
+.portal-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.portal-button.active {
+  color: #007BFF; 
+}
+
+.portal-button:hover {
+  color: #555;
+}
+
+
 main.craftsman-boxes {
   display: flex;
   flex-wrap: wrap;
